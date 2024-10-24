@@ -7,7 +7,7 @@ import (
 
 func main() {
     // Serve files in the current directory
-    fs := http.FileServer(http.Dir("./hls"))
+    fs := http.FileServer(http.Dir("./hls/"))
     
     // Handler for the /hls route with CORS headers
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
